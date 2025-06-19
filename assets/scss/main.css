@@ -1621,11 +1621,14 @@ h2 {
   border-radius: 2px;
   transition: all 0.3s ease;
 }
+<<<<<<< HEAD
 .site-header .hamburger.active {
   position: fixed;
   top: 20px;
   right: 20px;
 }
+=======
+>>>>>>> b649c5247e2db6c595d50ccfb33b39d6efea4d25
 .site-header .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -1690,11 +1693,18 @@ h2 {
     top: 0;
     left: 0;
     width: 100%;
+<<<<<<< HEAD
     background: rgba(0, 0, 0, 0.85);
     z-index: 999;
     padding: 0;
     overflow: hidden;
     transition: opacity 0.3s ease;
+=======
+    background-color: #09202e;
+    z-index: 999;
+    padding: 0;
+    overflow: hidden;
+>>>>>>> b649c5247e2db6c595d50ccfb33b39d6efea4d25
   }
   body.admin-bar .main-menu {
     top: 32px;
@@ -1707,9 +1717,16 @@ h2 {
     top: 0;
     right: 0;
     padding: 40px;
+<<<<<<< HEAD
     height: 100vh;
     width: 100%;
     background: rgba(0, 0, 0, 0.85);
+=======
+    opacity: 0.85;
+    height: 100vh;
+    width: 100%;
+    background: #09202e;
+>>>>>>> b649c5247e2db6c595d50ccfb33b39d6efea4d25
     flex-direction: column;
     gap: 15px;
     margin: 0;

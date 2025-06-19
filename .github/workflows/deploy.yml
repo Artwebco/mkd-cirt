@@ -20,4 +20,4 @@ jobs:
         remote-user: sigmtlbn
         private-ssh-key: ${{ secrets.SSH_KEY }}
         destination-path: /home/sigmtlbn/cirt.sigmoid.site/wp-content/themes/mkd-cirt/
-        rsync-options: "-e 'ssh -p 21098'"
+        rsync-options: "-e 'ssh -p 21098 -o StrictHostKeyChecking=no'"

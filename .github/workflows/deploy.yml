@@ -20,4 +20,4 @@ jobs:
         target-server: cirt.sigmoid.site
         remote-user: sigmtlbn
         private-ssh-key: ${{ secrets.SSH_KEY }}
-        destination-path: /home/sigmtlbn/cirt.sigmoid.sitewp-content/themes/mkd-cirt/
+        destination-path: /home/sigmtlbn/cirt.sigmoid.site/wp-content/themes/mkd-cirt/ 

@@ -1,0 +1,136 @@
+html {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+// Body styles
+body {
+    font-family: $heading-font;
+    color: $text-color;
+    font-size: 16px;
+    font-family: $heading-font;
+
+}
+
+p {
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+// Links
+a {
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+
+h1 {
+    font-size: $h1-font-size;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+    font-family: $heading-font;
+}
+
+h2 {
+    font-size: $h2-font-size;
+    text-transform: uppercase;
+    font-family: $heading-font;
+}
+
+h3 {
+    font-size: $h3-font-size;
+    text-transform: uppercase;
+    font-family: $heading-font;
+}
+
+h4 {
+    font-size: $h4-font-size;
+    font-family: $heading-font;
+}
+
+h5 {
+    font-size: $h5-font-size;
+    font-family: $heading-font;
+}
+
+h6 {
+    font-size: $h6-font-size;
+    font-family: $heading-font;
+}
+
+%fa-icon {
+    font-family: $fa-font-family;
+    font-weight: $fa-font-weight;
+    margin-right: $fa-padding-right;
+}
+
+.location:before {
+    @extend %fa-icon;
+    content: '\f3c5';
+}
+
+.mail:before {
+    @extend %fa-icon;
+    content: '\f0e0';
+}
+
+.phone:before {
+    @extend %fa-icon;
+    content: '\f095';
+}
+
+.single-page {
+    padding: 120px 0;
+}
+
+.margin-top-bottom-80 {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.page-title {
+    text-align: center;
+}
+
+.search {
+    .search-item {
+
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+        transition: transform 0.2s ease;
+        margin: 20px 0;
+        border-radius: 12px;
+
+        &:hover {
+
+            transform: translateY(-5px);
+            box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+
+        }
+
+        a {
+            color: #09202e;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            text-transform: inherit;
+            color: $primary-color;
+        }
+    }
+}
+
+ul {
+    margin-left: 20px;
+
+    li {
+        margin-bottom: 10px;
+    }
+}

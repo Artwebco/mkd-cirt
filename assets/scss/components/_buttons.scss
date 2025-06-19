@@ -1,0 +1,79 @@
+button {
+    cursor: pointer;
+}
+
+.btn {
+    font-size: 16px;
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-red {
+    background-color: $primary-color;
+    color: white;
+
+    &:hover {
+        background-color: #ffffff;
+        color: $primary-color !important;
+        border: 2px solid $primary-color;
+        padding: 13px 25px;
+    }
+}
+
+.btn-white {
+    background-color: white;
+    color: $primary-color !important;
+
+    &:hover {
+        opacity: 0.9;
+        background-color: #9D1236;
+        color: #ffffff !important;
+    }
+
+    a {
+        color: $primary-color !important;
+    }
+}
+
+.radius-15 {
+    border-radius: 15px;
+}
+
+.radius-40 {
+    border-radius: 40px;
+}
+
+.download {
+    border: 1.5px solid #ffffff;
+    color: #ffffff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.download .fa-download {
+    margin-left: 10px;
+    font-size: 14.5px;
+}
+
+#field_2_7 {
+    margin: 10px 0;
+}
+
+.template {
+    position: relative;
+}
+
+.button-see {
+
+    a,
+    .uagb-button__link {
+        background-color: #fff;
+        color: #09202e !important;
+    }
+}

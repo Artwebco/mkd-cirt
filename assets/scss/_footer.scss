@@ -1,0 +1,119 @@
+.footer-widgets {
+
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 2.2rem 0;
+    font-size: 1rem;
+
+    h5 {
+        padding-bottom: 25px;
+    }
+
+    .footer-widget-area {
+        flex: 1 1 22%; // 4 columns with gap
+        min-width: 200px;
+
+        .footer-widget {
+            padding-bottom: 15px;
+
+            // Remove padding from the last footer widget
+            &:last-child {
+                padding-bottom: 0;
+            }
+
+            small {
+                a {
+                    color: red;
+                }
+            }
+
+            .info {
+                li {
+                    margin-bottom: 10px;
+                }
+            }
+
+            .wp-block-list {
+                margin: 0px;
+                list-style: none;
+
+                a {
+                    color: #ffffff;
+
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+
+    .phone:before {
+        font-size: 12px;
+        background: #fff;
+        color: #09202e;
+        border-radius: 2px;
+        display: inline-flex;
+        height: 20px;
+        width: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mail:before {
+        font-size: 20px;
+    }
+}
+
+.copyright {
+    border-top: 1px solid #ccc;
+    font-size: 1rem;
+    padding: 15px 0;
+    display: flex;
+
+    .container {
+        display: inline-flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    p {
+        margin: 0px;
+        font-weight: 200;
+    }
+
+    ul {
+        display: inline-flex;
+        gap: 20px;
+
+        li {
+            list-style: none;
+
+            &::after {
+                content: "\f111"; // Unicode for solid circle
+                font-family: $fa-font-family; // or "Font Awesome 5 Free"
+                font-weight: 900; // required for solid icons
+                margin-left: 15px;
+                color: #888;
+                font-size: 8px;
+            }
+
+            &:last-child::after {
+                content: ""; // no icon after the last item
+            }
+        }
+
+        a {
+            color: #ffffff;
+
+            &:hover {
+                border-bottom: 1px solid #fff;
+            }
+        }
+    }
+
+}

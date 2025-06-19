@@ -1,0 +1,41 @@
+// Colors
+$primary-color: #9D1236;
+$secondary-color: #09202e;
+$bg-color: #fff;
+
+$text-color: #09202e;
+$heading-font: 'Inter', 'Helvetica', sans-serif;
+
+// Spacing
+$spacer: 16px;
+$padding: 20px;
+
+$container-max-width: 1440px;
+$container-padding: 15px;
+
+// Base font size (this will be used for rem calculations)
+$base-font-size: 16px;
+$heading-font-size: 2rem;
+
+// Heading font sizes
+$h1-font-size: 2rem;
+$h2-font-size: 1.5rem;
+$h3-font-size: 1.17rem;
+$h4-font-size: 1rem;
+$h5-font-size: 0.83rem;
+$h6-font-size: 0.5rem;
+
+// General Font Awesome icon styles
+$fa-font-family: 'Font Awesome 6 Pro';
+$fa-font-weight: 900;
+$fa-padding-right: 10px;
+
+
+// Variables (optional - for customization)
+$modal-bg: rgba(0, 0, 0, 0.75);
+$modal-z-index: 9999;
+$modal-padding: 2rem;
+$modal-border-radius: 8px;
+$modal-max-width: 500px;
+$modal-bg-color: #fff;
+$close-btn-size: 1.5rem;

@@ -1,0 +1,167 @@
+#functions {
+    .uagb-container-inner-blocks-wrap {
+        border-top: 2px solid #d1d1d3;
+        border-bottom: 2px solid #d1d1d3;
+        padding: 40px 0;
+        margin: 60px 0;
+    }
+
+    h2 {
+        max-width: 50%;
+    }
+}
+
+.light-h2 {
+    color: #4B4B4B;
+    display: block;
+    font-weight: 300;
+    font-size: 20px;
+    margin: 10px 0 20px;
+}
+
+.gray-box {
+    background-color: #EBECEE !important;
+    color: #000;
+    border-radius: 20px 0px 0px 20px;
+    padding: 60px;
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.black-box {
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px;
+    padding: 120px;
+    font-size: 24px;
+    font-weight: 200;
+
+    p {
+        margin-bottom: 25px;
+        color: #fff !important;
+    }
+}
+
+.career {
+    margin: 40px 0;
+
+    // .career-p {
+    //     padding-right: 200px !important;
+    // }
+
+    .gform-field-label {
+        display: none !important;
+    }
+
+    .left {
+        margin-left: auto;
+    }
+}
+
+.cyber-security {
+    h2 {
+        color: $primary-color;
+        font-size: 1.75rem;
+    }
+
+    .h2-subtitle {
+        font-size: 1.875rem;
+        font-weight: 300;
+        color: #4B4B4B;
+    }
+
+    h3 {
+        font-size: 1.875rem;
+        display: flex;
+        margin-bottom: 10px;
+
+        &:before {
+            content: url('../images/eufy-security.svg');
+            padding-right: 5px;
+        }
+    }
+
+    p {
+        color: #4B4B4B;
+        font-size: 20px;
+    }
+}
+
+.dual-section {
+    .wp-block-latest-posts__post-title {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+
+    .left-section {
+        color: #fff;
+
+        .wp-block-latest-posts__post-title {
+            color: #fff;
+        }
+
+        li {
+            &:before {
+                content: url('../images/security-shield.svg');
+                top: 5px;
+                position: relative;
+                padding-right: 5px;
+            }
+        }
+    }
+
+    .right-section {
+        .wp-block-latest-posts__post-title {
+            color: #09202e;
+        }
+
+        li {
+            &:nth-child(2) {
+                padding-left: 40px;
+            }
+
+            &:before {
+                content: url('../images/cloud.svg');
+                top: 5px;
+                position: relative;
+                padding-right: 5px;
+            }
+        }
+    }
+}
+
+
+.cyber-security1 {
+    .wp-block-list {
+        margin-top: 20px;
+        padding-left: 25px;
+    }
+
+    ul {
+        margin-top: 20px;
+
+        li {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+    }
+}
+
+.security-advices-grid.grid-2x2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* spacing between items */
+}
+
+.security-advices-grid.grid-2x2 .grid-item {
+    width: calc(50% - 10px);
+    /* two items per row with gap */
+    box-sizing: border-box;
+    display: block;
+    /* add more styles as needed */
+}

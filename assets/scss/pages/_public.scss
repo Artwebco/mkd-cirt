@@ -1,0 +1,109 @@
+.news-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr; // Left column larger, two smaller columns on the right
+    grid-template-rows: repeat(1, auto); // Three rows with adaptable sizing
+    gap: 20px;
+
+    .news-item {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        color: inherit;
+        overflow: hidden;
+        border-radius: 15px;
+
+        &.featured {
+            grid-column: 1 / 2; // First item spans the wide left column
+            grid-row: 1 / 3; // Takes up two rows for emphasis
+        }
+
+        .circle {
+            background: #fff;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+
+            .arrow {
+                width: 25px;
+                height: 25px;
+                background-repeat: no-repeat;
+                background-image: url('../images/arrow.png');
+                transform: rotate(148deg);
+            }
+        }
+
+        .image-container {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0) 70%);
+                pointer-events: none; // allows clicks to go through
+            }
+
+            img {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+                border-radius: 15px;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                background: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0) 70%);
+            }
+
+            .news-title {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                color: #fff;
+                text-align: center;
+                text-transform: inherit;
+                font-size: 20px;
+                z-index: 1;
+                text-shadow: 1px 2px #09202e;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        &:hover .circle {
+            transform: translateX(6px);
+        }
+
+        .featured {
+            img {
+                max-height: 400px;
+            }
+
+        }
+
+    }
+
+    .small,
+    .secondary {
+        img {
+            max-height: 185px;
+        }
+
+        .news-title {
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+    }
+}

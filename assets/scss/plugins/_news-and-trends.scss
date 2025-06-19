@@ -1,0 +1,139 @@
+// VBL Section
+.vbl-section {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.vbl-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.vbl-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.vbl-item {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 300px;
+
+    &.row1-30 {
+        width: 29%;
+    }
+
+    &.row1-70 {
+        width: 69.5%;
+    }
+
+    &.row2-40 {
+        width: 39%;
+    }
+
+    &.row2-30 {
+        width: 29%;
+
+        &.last {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative;
+
+            .vbl-img {
+                border-radius: 15px;
+                overflow: hidden;
+            }
+
+            a {
+                height: 100%;
+            }
+        }
+    }
+}
+
+.vbl-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.vbl-overlay {
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 1) 0%, // Solid black at the bottom
+            rgba(0, 0, 0, 0.5) 30%, // Semi-transparent black around 30%
+            rgba(0, 0, 0, 0) 70% // Fully transparent at the middle
+        );
+    transition: background 0.3s ease;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+
+    h3 {
+        margin: 0;
+        font-size: 26px;
+        font-weight: 500;
+        text-shadow: 1px 2px #000;
+        text-transform: inherit;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; // Limit to 3 lines
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.vbl-button-below {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+
+    a {
+        width: 100%;
+        display: block;
+    }
+}
+
+.vbl-more-inline {
+    background: rgb(170, 0, 0);
+    color: #fff;
+    padding: 15px 24px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    width: 100%;
+    transition: ease-out 0.5s;
+}
+
+.vbl-more-inline:hover {
+    box-shadow: inset 0 0 200px 0 rgb(84, 0, 0);
+    color: #fff;
+}
+
+// Mobile-specific styles (up to 768px)
+@media (max-width: 768px) {
+    .vbl-item {
+        width: 100% !important;
+        height: 150px !important;
+    }
+
+    .vbl-item.row2-30.last {
+        height: 230px !important;
+    }
+}

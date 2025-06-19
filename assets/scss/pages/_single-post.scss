@@ -1,0 +1,28 @@
+.single-post {
+    h1 {
+        text-transform: inherit;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .post-date {
+        background-color: #fe626233;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-right: 10px;
+        padding-left: 10px;
+        border-radius: 10px;
+        font-size: 14px;
+        display: inline-flex;
+    }
+
+    ul {
+        margin-left: 25px;
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
+}

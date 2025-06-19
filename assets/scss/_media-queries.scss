@@ -1,0 +1,196 @@
+@use "sass:math";
+
+// Max-width: 900px (tablets and below)
+@media (max-width: 900px) {
+    .box1-wrapper {
+        padding: 20px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0 !important;
+            width: 100% !important;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.15);
+            -webkit-backdrop-filter: blur(25.8px);
+            backdrop-filter: blur(25.8px);
+            z-index: 0;
+        }
+    }
+}
+
+.only-mobile {
+    display: none;
+}
+
+.not-mobile {
+    display: block;
+}
+
+// Max-width: 767px (phones and small tablets)
+@media (max-width: 767px) {
+
+    .only-mobile {
+        display: flex;
+    }
+
+    .not-mobile {
+        display: none;
+    }
+
+    .mobile-top-header {
+        background-color: $primary-color;
+        padding: 20px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .top-header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .mobile-top-bar .language,
+    // .mobile-top-bar .incident-button {
+    //     display: block !important;
+    // }
+
+    article h2 {
+        text-transform: inherit !important;
+        font-size: 1.6rem;
+    }
+
+    .second-menu a::before {
+        content: none !important;
+    }
+
+    .second-menu .current-menu-item a {
+        border-radius: 10px !important;
+    }
+
+    .copyright .container {
+        flex-direction: column;
+    }
+
+    .dual-section {
+
+        .left-section,
+        .left-section .wp-block-latest-posts__post-title {
+            color: #09202e !important;
+        }
+
+        .right-section li:nth-child(2) {
+            padding-left: 0px !important;
+        }
+
+        .left-section li::before {
+            content: url(../images/security-shield-black.svg) !important;
+        }
+    }
+
+    .sub-item .btn {
+        border: 1px solid;
+        border-radius: 20px;
+        display: table;
+        width: auto !important;
+        padding: 10px 20px !important;
+        margin-left: auto;
+    }
+
+    .margin-top-bottom-80 {
+        margin-top: 40px !important;
+        margin-bottom: 40px;
+    }
+}
+
+// Max-width: 600px (phones)
+@media (max-width: 600px) {
+    .hero-section .container {
+        padding: 0 !important;
+    }
+
+    .projects,
+    .project-content {
+        flex-direction: column;
+    }
+
+    .header-container .language,
+    .header-container .incident-button {
+        display: none;
+    }
+
+    .constituent-form {
+        margin-top: unset;
+        margin-bottom: unset;
+        padding: 10px !important;
+    }
+
+    .gray-box {
+        padding: 20px !important;
+        border-radius: 20px !important;
+    }
+
+    .box1 {
+        padding-top: 120px !important;
+
+        .hero {
+            max-width: 100% !important;
+
+            .wrapper {
+                display: table !important;
+
+                > :first-child {
+                    width: 100% !important;
+                }
+
+                > :last-child {
+                    justify-content: flex-end;
+                    align-items: center;
+                }
+            }
+
+            .second-menu {
+                justify-content: center;
+                gap: 20px;
+
+                a {
+                    color: #fff;
+                    font-size: 24px;
+                    padding: 10px 25px;
+
+                    &:hover {
+                        border-radius: 10px !important;
+                    }
+                }
+
+                .current-menu-item a {
+                    border-radius: 10px !important;
+                }
+            }
+        }
+    }
+
+    #functions h2 {
+        max-width: 100% !important;
+    }
+
+    .black-box {
+        padding: 0 !important;
+    }
+
+    .cyber-security {
+        .wp-block-group {
+            margin-bottom: 40px !important;
+        }
+
+        .h2-subtitle {
+            font-size: 1.2rem !important;
+        }
+    }
+
+    .news-grid {
+        display: flex !important;
+        flex-direction: column;
+    }
+}

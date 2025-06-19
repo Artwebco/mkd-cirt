@@ -10,17 +10,18 @@ jobs:
     name: 🚀 Deploy Website Every Commit
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get Latest Code
-      uses: actions/checkout@v3
+      - name: 🚚 Get Latest Code
+        uses: actions/checkout@v3
 
-    - name: 📂 Upload via SCP to Namecheap Hosting
-      uses: appleboy/scp-action@v0.1.7
-      with:
-        host: cirt.sigmoid.site
-        username: sigmtlbn
-        key: ${{ secrets.SSH_KEY }}
-        port: 21098
-        source: "."
-        target: "/home/sigmtlbn/cirt.sigmoid.site/wp-content/themes/mkd-cirt"
-        strip_components: 1
-        overwrite: true
+      - name: 📂 Upload via SCP to Namecheap Hosting
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: cirt.sigmoid.site
+          username: sigmtlbn
+          port: 21098
+          key: ${{ secrets.SSH_KEY }}           # Your private SSH key (passphrase-protected)
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}  # Your SSH key passphrase
+          source: "."
+          target: "/home/sigmtlbn/cirt.sigmoid.site/wp-content/themes/mkd-cirt"
+          strip_components: 1
+          overwrite: true

@@ -1,0 +1,39 @@
+// 1. Config
+@import "variables";
+@import "mixins";
+@import "fonts";
+// 3. Base & Layout
+@import "base";
+@import "layout";
+
+// 2. Reset
+@import "reset";
+
+// 4. Components
+@import "components";
+@import "components/buttons"; // if not included above
+
+// 5. Forms & Animations
+@import "forms";
+@import "animations";
+
+// 6. Pages
+@import 'pages/home';
+@import 'pages/students';
+@import 'pages/projects';
+@import 'pages/services';
+@import 'pages/public';
+@import 'pages/single-projects';
+@import 'pages/single-post';
+@import 'pages/category';
+
+// 7. Layout parts (optional – if specific to structure)
+@import 'header';
+@import 'footer';
+
+// 8. Plugins
+@import "plugins/security-advices";
+@import "plugins/news-and-trends";
+
+// 9. Media Queries (if centralized)
+@import "media-queries";

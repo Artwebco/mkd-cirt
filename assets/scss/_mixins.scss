@@ -1,0 +1,126 @@
+.wpcp-single-item {
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px #adadad;
+}
+
+.w3eden .card h3 {
+    text-transform: inherit;
+}
+
+.latest-active-projects {
+    box-shadow: rgba(0, 0, 0, 0.15) -4px 9px 25px -6px;
+    padding: 20px;
+    border-radius: 15px;
+
+    .lap-view-all-button {
+        text-decoration: underline;
+    }
+
+    .lap-project-item {
+        &:hover {
+            color: $primary-color;
+        }
+
+        display: inline-flex;
+
+        &:before {
+            content: url(../images/eufy-security.svg);
+
+            padding-right: 10px;
+        }
+
+        .lap-project-title {
+            text-transform: inherit;
+
+
+        }
+
+        .lap-project-short-desc {
+
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #3e5164;
+
+        }
+    }
+}
+
+.text-muted.text-small i.fas.fa-copy,
+.text-muted.text-small {
+    /* Hide only the icon and the file count text */
+}
+
+.text-muted.text-small i.fas.fa-copy {
+    display: none !important;
+}
+
+.text-muted.text-small {
+    font-size: 0;
+    /* Hides everything inside */
+}
+
+.text-muted.text-small i.fas.fa-hdd {
+    font-size: 14px;
+    /* Restore HDD icon */
+}
+
+.text-muted.text-small::after {
+    content: "985.64 KB";
+    font-size: 14px;
+    color: #6c757d;
+    margin-left: 5px;
+}
+
+//Spinner
+@mixin spinner($size, $border-width) {
+    width: $size;
+    height: $size;
+    border: $border-width solid #f3f3f3;
+    border-top: $border-width solid $primary-color;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+// Base spinner
+.spinner {
+    @include spinner(40px, 4px);
+    margin: 20px auto;
+}
+
+.loading-text {
+    text-align: center;
+}
+
+// Smaller spinner for buttons or inline loading
+.spinner-small {
+    @include spinner(20px, 3px);
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+// Keyframes
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.early-lcp {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.moove-gdpr-branding-cnt {
+    display: none !important;
+}

@@ -19,10 +19,10 @@ function cirt_enqueue_scripts()
 {
 
     // CSS
-    wp_enqueue_style('cirt-main-style', get_template_directory_uri() . '/assets/scss/main.css', [], '1.0');
+    wp_enqueue_style('cirt-main-style', get_template_directory_uri() . '/assets/scss/main.css', [], '1.1');
 
     // JS
-    wp_enqueue_script('cirt-main-script', get_template_directory_uri() . '/assets/js/script.js', [], '1.0', true);
+    wp_enqueue_script('cirt-main-script', get_template_directory_uri() . '/assets/js/script.js', [], '1.1', true);
 }
 add_action('wp_enqueue_scripts', 'cirt_enqueue_scripts');
 
@@ -38,12 +38,12 @@ function cirt_widgets_init()
 {
     for ($i = 1; $i <= 4; $i++) {
         register_sidebar([
-            'name'          => "Footer Widget $i",
-            'id'            => "footer-$i",
+            'name' => "Footer Widget $i",
+            'id' => "footer-$i",
             'before_widget' => '<div class="footer-widget">',
-            'after_widget'  => '</div>',
-            'before_title'  => '<h4 class="widget-title">',
-            'after_title'   => '</h4>',
+            'after_widget' => '</div>',
+            'before_title' => '<h4 class="widget-title">',
+            'after_title' => '</h4>',
         ]);
     }
 }
@@ -112,7 +112,7 @@ add_filter('enter_title_here', 'change_cpt_title_placeholder');
 //Projects page ajax
 function filter_projects_callback()
 {
-    $paged = isset($_POST['paged']) ? (int)$_POST['paged'] : 1;
+    $paged = isset($_POST['paged']) ? (int) $_POST['paged'] : 1;
     $status = isset($_POST['status']) ? sanitize_text_field($_POST['status']) : '';
     $category = isset($_POST['category']) ? sanitize_text_field($_POST['category']) : '';
     $search = isset($_POST['search']) ? sanitize_text_field($_POST['search']) : '';
@@ -130,8 +130,8 @@ function filter_projects_callback()
     if (!empty($category)) {
         $tax_query[] = [
             'taxonomy' => 'project-categories',
-            'field'    => 'slug',
-            'terms'    => $category,
+            'field' => 'slug',
+            'terms' => $category,
         ];
     }
 
@@ -170,13 +170,12 @@ function filter_projects_callback()
                 }
             }
 
-?>
-            <a href="<?php the_permalink(); ?>" class="card"
-                data-status="<?php echo esc_attr($status_label); ?>"
+            ?>
+            <a href="<?php the_permalink(); ?>" class="card" data-status="<?php echo esc_attr($status_label); ?>"
                 data-donors="<?php echo esc_attr(implode(',', $donor_names)); ?>">
                 <h2><?php echo esc_html($title); ?></h2>
 
-                <?php if (!empty($status_label)) :
+                <?php if (!empty($status_label)):
                     $status_class = ($status_label === 'Активен') ? 'active' : 'inactive'; ?>
                     <div class="status <?php echo esc_attr($status_class); ?>">
                         <?php echo esc_html($status_label); ?>
@@ -185,16 +184,16 @@ function filter_projects_callback()
 
                 <?php
                 $categories = get_the_terms(get_the_ID(), 'project-categories');
-                if (!empty($categories) && !is_wp_error($categories)) :
+                if (!empty($categories) && !is_wp_error($categories)):
                     $cat_names = wp_list_pluck($categories, 'name');
-                ?>
+                    ?>
                     <div class="project-categories">
                         <?php echo esc_html(implode(', ', $cat_names)); ?>
                     </div>
                 <?php endif; ?>
             </a>
 
-<?php
+            <?php
         }
     } else {
         echo '<p class="no-results">Нема проекти што одговараат на критериумите.</p>';
@@ -217,12 +216,12 @@ function mytheme_widgets_init()
 {
 
     register_sidebar(array(
-        'name'          => __('Footer Menu'),
-        'id'            => 'footer-menu',
+        'name' => __('Footer Menu'),
+        'id' => 'footer-menu',
         'before_widget' => '<div class="footer-menu-widget">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
     ));
 }
 add_action('widgets_init', 'mytheme_widgets_init');

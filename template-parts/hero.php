@@ -1,13 +1,10 @@
 <section class="hero-section">
 
     <div class="video-background">
-        <?php if (wp_is_mobile()) : ?>
-            <img
-                src="/wp-content/themes/mkd-cirt/assets/images/mobile-background.webp"
-                alt="Mobile Background"
-                class="video-background-img"
-                decoding="async">
-        <?php else : ?>
+        <?php if (wp_is_mobile()): ?>
+            <img src="/wp-content/themes/mkd-cirt/assets/images/mobile-background.webp" alt="Mobile Background"
+                class="video-background-img" decoding="async" loading="eager" width="375" height="667" />
+        <?php else: ?>
             <video width="1920" height="1080" autoplay muted loop playsinline aria-hidden="true">
                 <source src="/wp-content/themes/mkd-cirt/assets/video/header-video.mp4" type="video/mp4">
             </video>
@@ -25,13 +22,14 @@
                     'posts_per_page' => 1,
                 ]);
 
-                if ($hero_lcp_query->have_posts()) :
-                    while ($hero_lcp_query->have_posts()) : $hero_lcp_query->the_post();
+                if ($hero_lcp_query->have_posts()):
+                    while ($hero_lcp_query->have_posts()):
+                        $hero_lcp_query->the_post();
                         $subitem_title = get_post_meta(get_the_ID(), 'title_3', true);
-                        if (!empty($subitem_title)) :
-                ?>
+                        if (!empty($subitem_title)):
+                            ?>
                             <h2 class="subitem-title early-lcp"><?php echo esc_html($subitem_title); ?></h2>
-                <?php
+                            <?php
                         endif;
                     endwhile;
                     wp_reset_postdata();
@@ -45,8 +43,8 @@
                     'posts_per_page' => 1,
                 ]);
 
-                if ($hero_query->have_posts()) :
-                    while ($hero_query->have_posts()) :
+                if ($hero_query->have_posts()):
+                    while ($hero_query->have_posts()):
                         $hero_query->the_post();
 
                         $title = get_post_meta(get_the_ID(), 'title', true);
@@ -58,7 +56,7 @@
                         $subitem_button_title = get_post_meta(get_the_ID(), 'subitem_button_title', true);
                         $subitem_file_id = get_post_meta(get_the_ID(), 'subitem_file', true);
                         $subitem_file_url = wp_get_attachment_url($subitem_file_id);
-                ?>
+                        ?>
 
                         <div class="hero">
 
@@ -69,18 +67,20 @@
 
                             <div class="hero-text"><?php echo esc_html($description); ?></div>
 
-                            <?php if (!empty($button_label) && !empty($button_url)) : ?>
-                                <a href="<?php echo esc_url($button_url); ?>" class="btn btn-white radius-40"><?php echo esc_html($button_label); ?></a>
+                            <?php if (!empty($button_label) && !empty($button_url)): ?>
+                                <a href="<?php echo esc_url($button_url); ?>"
+                                    class="btn btn-white radius-40"><?php echo esc_html($button_label); ?></a>
                             <?php endif; ?>
 
                             <div class="sub-item">
                                 <div class="wrapper">
-                                    <?php if (!empty($subitem_title)) : ?>
+                                    <?php if (!empty($subitem_title)): ?>
                                         <h2 class="subitem-title"><?php echo esc_html($subitem_title); ?></h2>
                                     <?php endif; ?>
 
-                                    <?php if (!empty($subitem_button_title) && !empty($subitem_file_url)) : ?>
-                                        <a href="<?php echo esc_url($subitem_file_url); ?>" class="btn btn-blue radius-20" target="_blank" rel="noopener">
+                                    <?php if (!empty($subitem_button_title) && !empty($subitem_file_url)): ?>
+                                        <a href="<?php echo esc_url($subitem_file_url); ?>" class="btn btn-blue radius-20"
+                                            target="_blank" rel="noopener">
                                             <?php echo esc_html($subitem_button_title); ?>
                                         </a>
                                     <?php endif; ?>
@@ -88,7 +88,7 @@
                             </div>
                         </div>
 
-                <?php
+                        <?php
                     endwhile;
                     wp_reset_postdata();
                 endif;

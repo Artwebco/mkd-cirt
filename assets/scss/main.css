@@ -803,6 +803,7 @@ textarea::placeholder {
 
 .gform_confirmation_message {
   background-color: #eefcea;
+  border: 2px solid #2e8f00;
   color: #2e8f00;
   display: table;
   margin: auto;

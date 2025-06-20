@@ -421,19 +421,14 @@ function download_cymru_report()
 
 add_filter('script_loader_tag', function ($tag, $handle) {
     $defer_scripts = [
-        'wp-hooks',
-        'wp-i18n',
         'jquery-form',
         'cirt-main-script',
-        'wp-dom-ready',
-        'wp-ally',
         'gform_placeholder_js',
         'gform_gravityforms_theme_vendors_js',
         'gform_gravityforms_theme_js',
         'kadence-blocks-accordion-js',
         'moove_gdpr_frontend-js',
         'gform_gravityforms_theme-js-extra',
-        'wp-a11y-js-translations'
         // add more here as needed
     ];
 

@@ -1,38 +1,10 @@
 <section class="hero-section">
 
-    <div class="video-background">
-        <video class="video-background-video" width="1920" height="1080" autoplay muted loop playsinline
-            aria-hidden="true">
-            <source src="/wp-content/themes/mkd-cirt/assets/video/header-video.mp4" type="video/mp4">
-        </video>
-    </div>
-
-
+    <div class="video-background"></div>
 
     <div class="container">
         <div class="box1-wrapper">
             <div class="box1">
-
-                <?php
-                // FIRST — isolate and preload just the LCP <h2>
-                $hero_lcp_query = new WP_Query([
-                    'post_type' => 'hero-section',
-                    'posts_per_page' => 1,
-                ]);
-
-                if ($hero_lcp_query->have_posts()):
-                    while ($hero_lcp_query->have_posts()):
-                        $hero_lcp_query->the_post();
-                        $subitem_title = get_post_meta(get_the_ID(), 'title_3', true);
-                        if (!empty($subitem_title)):
-                            ?>
-                            <h2 class="subitem-title early-lcp"><?php echo esc_html($subitem_title); ?></h2>
-                            <?php
-                        endif;
-                    endwhile;
-                    wp_reset_postdata();
-                endif;
-                ?>
 
                 <?php
                 // THEN render full hero section

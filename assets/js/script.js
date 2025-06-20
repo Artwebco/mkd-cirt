@@ -364,3 +364,17 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.innerWidth > 767) {
+        const video = document.createElement('video');
+        video.src = "/wp-content/themes/mkd-cirt/assets/video/header-video.mp4";
+        video.autoplay = true;
+        video.muted = true;
+        video.loop = true;
+        video.playsInline = true;
+        video.className = "video-background-video";
+        video.setAttribute("aria-hidden", "true");
+        document.querySelector('.video-background').appendChild(video);
+    }
+});

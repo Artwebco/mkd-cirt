@@ -1625,7 +1625,7 @@ h2 {
 }
 .site-header .hamburger.active {
   position: fixed;
-  top: 25px;
+  top: 30px;
   right: 20px;
 }
 .site-header .hamburger.active span:nth-child(1) {

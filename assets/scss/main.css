@@ -1117,10 +1117,12 @@ h2 {
   color: #555;
 }
 .card .project-categories {
-  font-weight: 900;
-  color: #555;
-  font-size: 14px;
-  text-transform: uppercase;
+  color: #ffffff;
+  background: #000;
+  display: inline-flex;
+  font-size: 0.85rem;
+  border-radius: 12px;
+  padding: 4px 10px;
 }
 
 .page-description {

@@ -1,14 +1,20 @@
 <?php get_header(); ?>
 
 <?php
-echo do_shortcode('[hero_section]');
+// Render the hero section BEFORE the content and scripts
+if (is_page(['konstituenti', 'studenti', 'gragjani', 'sorabotnici'])) {
+    get_template_part('template-parts/hero');
+}
 ?>
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+<?php if (have_posts()):
+    while (have_posts()):
+        the_post(); ?>
         <article>
             <?php the_content(); ?>
         </article>
     <?php endwhile;
-else : ?>
+else: ?>
     <p>Не е пронајдена содржина.</p>
 <?php endif; ?>
 

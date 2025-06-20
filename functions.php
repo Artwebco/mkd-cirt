@@ -19,10 +19,10 @@ function cirt_enqueue_scripts()
 {
 
     // CSS
-    wp_enqueue_style('cirt-main-style', get_template_directory_uri() . '/assets/scss/main.css', [], '1.1');
+    wp_enqueue_style('cirt-main-style', get_template_directory_uri() . '/assets/scss/main.css', [], '1.2');
 
     // JS
-    wp_enqueue_script('cirt-main-script', get_template_directory_uri() . '/assets/js/script.js', [], '1.1', true);
+    wp_enqueue_script('cirt-main-script', get_template_directory_uri() . '/assets/js/script.js', [], '1.2', true);
 }
 add_action('wp_enqueue_scripts', 'cirt_enqueue_scripts');
 
@@ -418,3 +418,29 @@ function download_cymru_report()
         exit;
     }
 }
+
+add_filter('script_loader_tag', function ($tag, $handle) {
+    $defer_scripts = [
+        'wp-hooks',
+        'wp-i18n',
+        'jquery-form',
+        'cirt-main-script',
+        'wp-dom-ready',
+        'wp-ally',
+        'gform_placeholder_js',
+        'gform_gravityforms_theme_vendors_js',
+        'gform_gravityforms_theme_js',
+        'kadence-blocks-accordion-js',
+        'moove_gdpr_frontend-js',
+        'gform_gravityforms_theme-js-extra',
+        'wp-a11y-js-translations'
+        // add more here as needed
+    ];
+
+    // only defer if it's not already async or defer
+    if (in_array($handle, $defer_scripts) && strpos($tag, 'defer') === false && strpos($tag, 'async') === false) {
+        return str_replace('<script ', '<script defer ', $tag);
+    }
+
+    return $tag;
+}, 10, 2);

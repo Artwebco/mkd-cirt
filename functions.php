@@ -418,24 +418,3 @@ function download_cymru_report()
         exit;
     }
 }
-
-// add_filter('script_loader_tag', function ($tag, $handle) {
-//     $defer_scripts = [
-//         'jquery-form',
-//         'cirt-main-script',
-//         'gform_placeholder_js',
-//         'gform_gravityforms_theme_vendors_js',
-//         'gform_gravityforms_theme_js',
-//         'kadence-blocks-accordion-js',
-//         'moove_gdpr_frontend-js',
-//         'gform_gravityforms_theme-js-extra',
-//         // add more here as needed
-//     ];
-
-//     // only defer if it's not already async or defer
-//     if (in_array($handle, $defer_scripts) && strpos($tag, 'defer') === false && strpos($tag, 'async') === false) {
-//         return str_replace('<script ', '<script defer ', $tag);
-//     }
-
-//     return $tag;
-// }, 10, 2);

@@ -167,10 +167,13 @@
             border-radius: 2px;
             transition: all 0.3s ease;
         }
+
         &.active {
             position: fixed;
+            top: 25px;
             right: 20px;
         }
+
         &.active span:nth-child(1) {
             transform: rotate(45deg) translate(5px, 5px);
         }

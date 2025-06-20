@@ -1,15 +1,13 @@
 <section class="hero-section">
 
     <div class="video-background">
-        <?php if (wp_is_mobile()): ?>
-            <img src="/wp-content/themes/mkd-cirt/assets/images/mobile-background.webp" alt="Mobile Background"
-                class="video-background-img" decoding="async" loading="eager" width="375" height="667" />
-        <?php else: ?>
-            <video width="1920" height="1080" autoplay muted loop playsinline aria-hidden="true">
-                <source src="/wp-content/themes/mkd-cirt/assets/video/header-video.mp4" type="video/mp4">
-            </video>
-        <?php endif; ?>
+        <video class="video-background-video" width="1920" height="1080" autoplay muted loop playsinline
+            aria-hidden="true">
+            <source src="/wp-content/themes/mkd-cirt/assets/video/header-video.mp4" type="video/mp4">
+        </video>
     </div>
+
+
 
     <div class="container">
         <div class="box1-wrapper">

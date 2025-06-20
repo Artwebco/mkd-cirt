@@ -2296,6 +2296,15 @@ h2 {
 }
 
 @media (max-width: 767px) {
+  .hero-section {
+    background-image: url("/wp-content/themes/mkd-cirt/assets/images/mobile-background.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .video-background {
+    display: none;
+  }
   .only-mobile {
     display: flex;
   }

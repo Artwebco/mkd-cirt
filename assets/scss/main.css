@@ -1752,71 +1752,6 @@ h2 {
     font-size: 1.6rem;
   }
 }
-.hero {
-  color: #fff;
-  max-width: 40%;
-  position: relative;
-}
-.hero h1 {
-  font-size: 64px;
-  font-weight: 500;
-}
-.hero h1 span {
-  font-size: 24px;
-  font-weight: 400;
-}
-.hero h2 {
-  font-weight: 300;
-  font-size: 20px;
-}
-.hero .hero-text {
-  font-size: 24px;
-  font-weight: 200;
-}
-.hero .btn {
-  font-size: 22px;
-  margin-top: 20px;
-  padding: 10px 45px;
-}
-.hero .sub-item {
-  border-top: 1px solid;
-  margin: 45px 0;
-  padding-top: 15px;
-}
-.hero .sub-item .btn {
-  font-size: 18px;
-  color: #fff;
-  padding: unset;
-  position: relative;
-  transition: all 0.3s ease;
-}
-.hero .sub-item .btn:after {
-  content: "\f061";
-  font-family: "Font Awesome 6 Pro";
-  padding-left: 5px;
-  transition: transform 0.3s ease;
-  display: inline-block;
-}
-.hero .sub-item .btn:hover:after {
-  transform: translateX(5px);
-}
-.hero .sub-item .wrapper {
-  display: flex;
-}
-.hero .sub-item .wrapper > :first-child {
-  width: 70%;
-}
-.hero .sub-item .wrapper > :last-child {
-  width: 30%;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.hero-section {
-  width: 100%;
-  position: relative;
-}
-
 #flags {
   display: flex;
   justify-content: center;
@@ -1828,13 +1763,15 @@ h2 {
   gap: 60px;
 }
 
-/* Create expanded background effect using ::before */
-.box1 {
+.hero-section {
+  width: 100%;
+  position: relative;
+}
+.hero-section .box1 {
   position: relative;
   padding-top: 200px;
 }
-
-.video-background {
+.hero-section .video-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -1842,8 +1779,8 @@ h2 {
   height: 100%;
   overflow: hidden;
 }
-.video-background video,
-.video-background .video-background-img {
+.hero-section .video-background video,
+.hero-section .video-background .video-background-img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1852,18 +1789,101 @@ h2 {
   top: 0;
   left: 0;
 }
-
-.second-menu {
+.hero-section .hero {
+  color: #fff;
+  max-width: 40%;
+  position: relative;
+}
+.hero-section .hero h1 {
+  font-size: 64px;
+  font-weight: 500;
+}
+.hero-section .hero h1 span {
+  font-size: 24px;
+  font-weight: 400;
+}
+.hero-section .hero h2 {
+  font-weight: 300;
+  font-size: 20px;
+}
+.hero-section .hero .hero-text {
+  font-size: 24px;
+  font-weight: 200;
+}
+.hero-section .hero .btn {
+  font-size: 22px;
+  margin-top: 20px;
+  padding: 10px 45px;
+}
+.hero-section .hero .sub-item {
+  border-top: 1px solid;
+  margin: 45px 0;
+  padding-top: 15px;
+}
+.hero-section .hero .sub-item .btn {
+  font-size: 18px;
+  color: #fff;
+  padding: unset;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.hero-section .hero .sub-item .btn:after {
+  content: "\f061";
+  font-family: "Font Awesome 6 Pro";
+  padding-left: 5px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+.hero-section .hero .sub-item .btn:hover:after {
+  transform: translateX(5px);
+}
+.hero-section .hero .sub-item .wrapper {
+  display: flex;
+}
+.hero-section .hero .sub-item .wrapper > :first-child {
+  width: 70%;
+}
+.hero-section .hero .sub-item .wrapper > :last-child {
+  width: 30%;
+  justify-content: flex-end;
+  align-items: center;
+}
+.hero-section .box1-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: calc(100% + 50vw);
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
+  z-index: 0;
+}
+.hero-section .box1-wrapper {
+  position: relative;
+}
+.hero-section .box1-wrapper .hero-blur-overlay {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: calc(100% + 50vw);
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(25.8px);
+          backdrop-filter: blur(25.8px);
+  z-index: 0;
+  pointer-events: none;
+}
+.hero-section .second-menu {
   justify-content: center;
   gap: 20px;
 }
-.second-menu ul {
+.hero-section .second-menu ul {
   margin: 0px;
 }
-.second-menu ul li {
+.hero-section .second-menu ul li {
   margin: 0px;
 }
-.second-menu a {
+.hero-section .second-menu a {
   color: #fff;
   font-size: 24px;
   padding: 10px 25px;
@@ -1871,7 +1891,7 @@ h2 {
   z-index: 1;
   overflow: hidden;
 }
-.second-menu a::before {
+.hero-section .second-menu a::before {
   content: "";
   position: absolute;
   left: 0;
@@ -1883,37 +1903,20 @@ h2 {
   z-index: -1;
   border-radius: 10px 10px 0 0;
 }
-.second-menu a:hover {
+.hero-section .second-menu a:hover {
   color: #09202e;
   border-radius: 10px 10px 0 0;
 }
-.second-menu a:hover::before {
+.hero-section .second-menu a:hover::before {
   bottom: 0;
 }
-.second-menu .current-menu-item a {
+.hero-section .second-menu .current-menu-item a {
   background-color: #fff;
   color: #09202e;
   border-radius: 10px 10px 0 0;
 }
-.second-menu li {
+.hero-section .second-menu li {
   padding: 10px 25px !important;
-}
-
-.box1-wrapper::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 50%;
-  width: calc(100% + 50vw);
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.15);
-  -webkit-backdrop-filter: blur(25.8px);
-          backdrop-filter: blur(25.8px);
-  z-index: 0;
-}
-
-.box1-wrapper {
-  position: relative;
 }
 
 .top_panel {

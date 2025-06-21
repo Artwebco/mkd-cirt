@@ -365,4 +365,15 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+window.addEventListener("load", function () {
+  const overlay = document.querySelector(".box1-wrapper::before"); // this won't work because pseudo-elements can't be directly selected
+
+  // Instead, apply blur to a real DOM element layered like a pseudo-element
+  const boxWrapper = document.querySelector(".box1-wrapper");
+  if (boxWrapper) {
+    const blurDiv = document.createElement("div");
+    blurDiv.className = "hero-blur-overlay";
+    boxWrapper.prepend(blurDiv);
+  }
+});
 

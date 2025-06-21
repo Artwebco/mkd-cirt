@@ -19,10 +19,10 @@ function cirt_enqueue_scripts()
 {
 
     // CSS
-    wp_enqueue_style('cirt-main-style', get_template_directory_uri() . '/assets/scss/main.css', [], '1.2');
+    wp_enqueue_style('cirt-main-style', get_template_directory_uri() . '/assets/scss/main.css', [], '1.3');
 
     // JS
-    wp_enqueue_script('cirt-main-script', get_template_directory_uri() . '/assets/js/script.js', [], '1.2', true);
+    wp_enqueue_script('cirt-main-script', get_template_directory_uri() . '/assets/js/script.js', [], '1.3', true);
 }
 add_action('wp_enqueue_scripts', 'cirt_enqueue_scripts');
 

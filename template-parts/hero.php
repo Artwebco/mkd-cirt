@@ -35,8 +35,12 @@
 
                         <div class="hero">
 
+                            <h1>
+                                <span><?php echo esc_html($title); ?></span><br>
+                                <?php echo esc_html($title2); ?>
+                            </h1>
 
-
+                            <div class="hero-text"><?php echo esc_html($description); ?></div>
 
                             <?php if (!empty($button_label) && !empty($button_url)): ?>
                                 <a href="<?php echo esc_url($button_url); ?>"
@@ -45,7 +49,9 @@
 
                             <div class="sub-item">
                                 <div class="wrapper">
-
+                                    <?php if (!empty($subitem_title)): ?>
+                                        <h2 class="subitem-title"><?php echo esc_html($subitem_title); ?></h2>
+                                    <?php endif; ?>
 
                                     <?php if (!empty($subitem_button_title) && !empty($subitem_file_url)): ?>
                                         <a href="<?php echo esc_url($subitem_file_url); ?>" class="btn btn-blue radius-20"

@@ -30,12 +30,12 @@
 
 // Max-width: 767px (phones and small tablets)
 @media (max-width: 767px) {
-    // .hero-section {
-    //     background-image: url('/wp-content/themes/mkd-cirt/assets/images/mobile-background.webp');
-    //     background-size: cover;
-    //     background-position: center;
-    //     background-repeat: no-repeat;
-    // }
+    .hero-section {
+        background-image: url('/wp-content/themes/mkd-cirt/assets/images/mobile-background.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
     .video-background{
         display: none;
     }

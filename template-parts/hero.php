@@ -49,9 +49,7 @@
 
                             <div class="sub-item">
                                 <div class="wrapper">
-                                    <?php if (!empty($subitem_title)): ?>
-                                        <h2 class="subitem-title"><?php echo esc_html($subitem_title); ?></h2>
-                                    <?php endif; ?>
+
 
                                     <?php if (!empty($subitem_button_title) && !empty($subitem_file_url)): ?>
                                         <a href="<?php echo esc_url($subitem_file_url); ?>" class="btn btn-blue radius-20"

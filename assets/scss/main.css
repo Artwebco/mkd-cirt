@@ -1851,15 +1851,6 @@ h2 {
 .hero-section .box1-wrapper {
   position: relative;
 }
-.hero-section .box1-wrapper .hero-blur-overlay {
-  position: absolute;
-  top: 0;
-  right: 50%;
-  width: calc(100% + 50vw);
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
-}
 .hero-section .second-menu {
   justify-content: center;
   gap: 20px;

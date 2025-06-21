@@ -2253,6 +2253,11 @@ h2 {
     height: 230px !important;
   }
 }
+@media (max-width: 900px) {
+  .box1-wrapper {
+    padding: 20px;
+  }
+}
 .only-mobile {
   display: none;
 }

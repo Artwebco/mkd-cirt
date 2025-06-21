@@ -2298,6 +2298,9 @@ h2 {
   .video-background {
     display: none;
   }
+  .hero-blur-overlay {
+    display: none;
+  }
   .only-mobile {
     display: flex;
   }

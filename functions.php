@@ -406,3 +406,17 @@ function download_cymru_report()
         exit;
     }
 }
+
+add_shortcode('hero_section', 'render_hero_section');
+function render_hero_section()
+{
+    // Only show on specific pages by slug or ID
+    if (is_page(['konstituenti', 'studenti', 'gragjani', 'sorabotnici'])) {
+        ob_start();
+        get_template_part('template-parts/hero');
+        return ob_get_clean();
+    }
+    return ''; // Don't render on other pages
+}
+
+add_filter('gform_submit_button', 'add_custom_css_classes', 10, 2);

@@ -377,3 +377,11 @@ window.addEventListener("load", function () {
   }
 });
 
+function defer_scripts($tag, $handle, $src) {
+    // Defer everything except jQuery migrate or core if necessary
+    if (!is_admin() && !in_array($handle, ['jquery-core', 'jquery-migrate'])) {
+        return '<script src="' . $src . '" defer></script>';
+    }
+    return $tag;
+}
+add_filter('script_loader_tag', 'defer_scripts', 10, 3);

@@ -35,10 +35,6 @@
 
                         <div class="hero">
 
-                            <h1>
-                                <span><?php echo esc_html($title); ?></span><br>
-                                <?php echo esc_html($title2); ?>
-                            </h1>
 
                             <div class="hero-text"><?php echo esc_html($description); ?></div>
 

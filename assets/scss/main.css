@@ -2107,23 +2107,6 @@ h2 {
     height: 230px !important;
   }
 }
-@media (max-width: 900px) {
-  .box1-wrapper {
-    padding: 20px;
-  }
-  .box1-wrapper::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0 !important;
-    width: 100% !important;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.15);
-    -webkit-backdrop-filter: blur(25.8px);
-    backdrop-filter: blur(25.8px);
-    z-index: 0;
-  }
-}
 .only-mobile {
   display: none;
 }
@@ -2133,12 +2116,6 @@ h2 {
 }
 
 @media (max-width: 767px) {
-  .hero-section {
-    background-image: url("/wp-content/themes/mkd-cirt/assets/images/mobile-background.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
   .video-background {
     display: none;
   }

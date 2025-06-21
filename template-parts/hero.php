@@ -36,7 +36,7 @@
                         <div class="hero">
 
 
-                            <div class="hero-text"><?php echo esc_html($description); ?></div>
+
 
                             <?php if (!empty($button_label) && !empty($button_url)): ?>
                                 <a href="<?php echo esc_url($button_url); ?>"
